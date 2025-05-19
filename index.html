@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body class="bg-white min-h-screen flex flex-col text-[#7c0f2d] font-[Kelly_Slab]">
+
+    <div class="bg-[#7c0f2d] text-white flex justify-between items-center px-10 rounded-b-3xl">
+      <div class="text-[64px]">Головна</div>
+      <div class="flex items-center space-x-2">
+
+        <div class="relative inline-block text-left">
+            <button id="dropdownButton" class="inline-flex justify-center w-full rounded-md px-4 py-2 text-[24px] font-medium text-white" onclick="toggleDropdownTheme()">
+              <label for="theme" class="block mr-3 text-[24px] font-medium text-white">Обрати тему</label>
+            </button>
+            <div id="dropdownTheme" class="origin-top-right absolute right-0 mt-2 w-56 rounded-md bg-[#7c0f2d] hidden z-10">
+              <div class="py-1">
+                <a href="#" class="block px-4 py-2 bg-[#7c0f2d] text-white text-[20px] hover:bg-[#d28fa0]">Червоний</a>
+                <a href="#" class="block px-4 py-2 bg-[#7c0f2d] text-white text-[20px] hover:bg-[#d28fa0]">Синій</a>
+                <a href="#" class="block px-4 py-2 bg-[#7c0f2d] text-white text-[20px] hover:bg-[#d28fa0]">Коричневий</a>
+                <a href="#" class="block px-4 py-2 bg-[#7c0f2d] text-white text-[20px] hover:bg-[#d28fa0]">Зелений</a>
+                <a href="#" class="block px-4 py-2 bg-[#7c0f2d] text-white text-[20px] hover:bg-[#d28fa0]">Фіолетовий</a>
+              </div>
+            </div>
+          </div>
+
+        <div class="relative inline-block text-left">
+            <button id="dropdownButton" onclick="toggleDropdownMenu()">
+              <div for="account" class="w-10 h-10 bg-white rounded-full border border-white ml-2"></div>
+            </button>
+            <div id="dropdownMenu" class="origin-top-right absolute right-0 mt-2 w-56 rounded-md bg-[#7c0f2d] hidden z-10">
+                <div class="py-1">
+                  <a href="index.html" class="block px-4 py-2 bg-[#7c0f2d] text-white text-[20px] hover:bg-[#d28fa0]">Головна</a>
+                  <a href="#" class="block px-4 py-2 bg-[#7c0f2d] text-white text-[20px] hover:bg-[#d28fa0]">Особистий кабінет</a>
+                  <a href="#" class="block px-4 py-2 bg-[#7c0f2d] text-white text-[20px] hover:bg-[#d28fa0]">Налаштування</a>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  
+    <!-- Основний вміст -->
+    <main class="flex flex-col items-center justify-center flex-grow text-center px-4">
+      <h1 class="text-[64px] leading-snug w-300">
+        Створіть особистий акаунт для зберігання своїх документів або скористайтеся лише для читання
+      </h1>
+  
+      <!-- Кнопки -->
+      <div class="flex flex-col sm:flex-row gap-10 mt-13">
+        <button class="bg-[#d28fa0] text-[36px] text-white w-110 py-2 rounded-2xl text-lg hover:bg-[#7c0f2d] transition">
+          <a href="registration.html">Зареєструватися</a>
+        </button>
+        <button class="bg-[#d28fa0] text-[36px] text-white w-110 py-2 rounded-2xl text-lg hover:bg-[#7c0f2d] transition">
+          Завантажити документ
+        </button>
+      </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+
+</body>
+</html>
