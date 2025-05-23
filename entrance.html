@@ -7,64 +7,95 @@
     <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap" rel="stylesheet">
     <title>Entrance</title>
 </head>
-<body class="bg-white min-h-screen flex flex-col text-[#7c0f2d] font-[Kelly_Slab]">
+<body class="min-h-screen flex flex-col font-[Kelly_Slab]" style="color: var(--text-color); background-color: var(--bg-color2);">
 
-    <div class="bg-[#7c0f2d] text-white flex justify-between items-center px-10 rounded-b-3xl">
-      <div class="text-[64px]">Вхід</div>
-      <div class="flex items-center space-x-2">
+  <div class="flex justify-between items-center px-10 rounded-b-3xl" style="background-color: var(--bg-color); color: var(--text-color2);">
+    <div class="text-[64px]">Вхід</div>
+    <div class="flex items-center space-x-2">
 
-        <div class="relative inline-block text-left">
-            <button id="dropdownButton" class="inline-flex justify-center w-full rounded-md px-4 py-2 text-[24px] font-medium text-white" onclick="toggleDropdownTheme()">
-              <label for="theme" class="block mr-3 text-[24px] font-medium text-white">Обрати тему</label>
-            </button>
-            <div id="dropdownTheme" class="origin-top-right absolute right-0 mt-2 w-56 rounded-md bg-[#7c0f2d] hidden z-10">
-              <div class="py-1">
-                <a href="#" class="block px-4 py-2 bg-[#7c0f2d] text-white text-[20px] hover:bg-[#d28fa0]">Червоний</a>
-                <a href="#" class="block px-4 py-2 bg-[#7c0f2d] text-white text-[20px] hover:bg-[#d28fa0]">Синій</a>
-                <a href="#" class="block px-4 py-2 bg-[#7c0f2d] text-white text-[20px] hover:bg-[#d28fa0]">Коричневий</a>
-                <a href="#" class="block px-4 py-2 bg-[#7c0f2d] text-white text-[20px] hover:bg-[#d28fa0]">Зелений</a>
-                <a href="#" class="block px-4 py-2 bg-[#7c0f2d] text-white text-[20px] hover:bg-[#d28fa0]">Фіолетовий</a>
-              </div>
+      <div class="relative inline-block text-left">
+          <button id="dropdownButton" class="inline-flex justify-center w-full rounded-md px-4 py-2 text-[24px] font-medium" onclick="toggleDropdownTheme()" style="color: var(--text-color2);">
+            <label for="theme" class="block mr-3 text-[24px] font-medium" style="color: var(--text-color2);">Обрати тему</label>
+          </button>
+          <div id="dropdownTheme" class="origin-top-right absolute right-0 mt-2 w-56 rounded-md hidden z-10" style="background-color: var(--bg-color);">
+            <div class="py-1">
+              <a href="#" onclick="event.preventDefault(); setTheme('w-red')" class="block px-4 py-2 text-[20px] transition-colors duration-200" style="background-color: var(--bg-color); color: var(--text-color2);"
+              onmouseover="this.style.backgroundColor='var(--accent-color)'"
+              onmouseout="this.style.backgroundColor='var(--bg-color)'">Світло-червоний</a>
+              <a href="#" onclick="event.preventDefault(); setTheme('w-blue')" class="block px-4 py-2 text-[20px] transition-colors duration-200" style="background-color: var(--bg-color); color: var(--text-color2);"
+              onmouseover="this.style.backgroundColor='var(--accent-color)'"
+              onmouseout="this.style.backgroundColor='var(--bg-color)'">Світло-синій</a>
+              <a href="#" onclick="event.preventDefault(); setTheme('w-brown')" class="block px-4 py-2 text-[20px] transition-colors duration-200" style="background-color: var(--bg-color); color: var(--text-color2);"
+              onmouseover="this.style.backgroundColor='var(--accent-color)'"
+              onmouseout="this.style.backgroundColor='var(--bg-color)'">Світло-коричневий</a>
+              <a href="#" onclick="event.preventDefault(); setTheme('w-green')" class="block px-4 py-2 text-[20px] transition-colors duration-200" style="background-color: var(--bg-color); color: var(--text-color2);"
+              onmouseover="this.style.backgroundColor='var(--accent-color)'"
+              onmouseout="this.style.backgroundColor='var(--bg-color)'">Світло-зелений</a>
+              <a href="#" onclick="event.preventDefault(); setTheme('w-purple')" class="block px-4 py-2 text-[20px] transition-colors duration-200" style="background-color: var(--bg-color); color: var(--text-color2);"
+              onmouseover="this.style.backgroundColor='var(--accent-color)'"
+              onmouseout="this.style.backgroundColor='var(--bg-color)'">Світло-фіолетовий</a>
+              <a href="#" onclick="event.preventDefault(); setTheme('b-red')" class="block px-4 py-2 text-[20px] transition-colors duration-200" style="background-color: var(--bg-color); color: var(--text-color2);"
+              onmouseover="this.style.backgroundColor='var(--accent-color)'"
+              onmouseout="this.style.backgroundColor='var(--bg-color)'">Темно-червоний</a>
+              <a href="#" onclick="event.preventDefault(); setTheme('b-blue')" class="block px-4 py-2 text-[20px] transition-colors duration-200" style="background-color: var(--bg-color); color: var(--text-color2);"
+              onmouseover="this.style.backgroundColor='var(--accent-color)'"
+              onmouseout="this.style.backgroundColor='var(--bg-color)'">Темно-синій</a>
+              <a href="#" onclick="event.preventDefault(); setTheme('b-brown')" class="block px-4 py-2 text-[20px] transition-colors duration-200" style="background-color: var(--bg-color); color: var(--text-color2);"
+              onmouseover="this.style.backgroundColor='var(--accent-color)'"
+              onmouseout="this.style.backgroundColor='var(--bg-color)'">Темно-коричневий</a>
+              <a href="#" onclick="event.preventDefault(); setTheme('b-green')" class="block px-4 py-2 text-[20px] transition-colors duration-200" style="background-color: var(--bg-color); color: var(--text-color2);"
+              onmouseover="this.style.backgroundColor='var(--accent-color)'"
+              onmouseout="this.style.backgroundColor='var(--bg-color)'">Темно-зелений</a>
+              <a href="#" onclick="event.preventDefault(); setTheme('b-purple')" class="block px-4 py-2 text-[20px] transition-colors duration-200" style="background-color: var(--bg-color); color: var(--text-color2);"
+              onmouseover="this.style.backgroundColor='var(--accent-color)'"
+              onmouseout="this.style.backgroundColor='var(--bg-color)'">Темно-фіолетовий</a>
             </div>
           </div>
-
-        <div class="relative inline-block text-left">
-            <button id="dropdownButton" onclick="toggleDropdownMenu()">
-              <div for="account" class="w-10 h-10 bg-white rounded-full border border-white ml-2"></div>
-            </button>
-            <div id="dropdownMenu" class="origin-top-right absolute right-0 mt-2 w-56 rounded-md bg-[#7c0f2d] hidden z-10">
-                <div class="py-1">
-                  <a href="index.html" class="block px-4 py-2 bg-[#7c0f2d] text-white text-[20px] hover:bg-[#d28fa0]">Головна</a>
-                  <a href="#" class="block px-4 py-2 bg-[#7c0f2d] text-white text-[20px] hover:bg-[#d28fa0]">Особистий кабінет</a>
-                  <a href="#" class="block px-4 py-2 bg-[#7c0f2d] text-white text-[20px] hover:bg-[#d28fa0]">Налаштування</a>
-                </div>
-            </div>
         </div>
 
+      <div class="relative inline-block text-left">
+          <button id="dropdownButton" onclick="toggleDropdownMenu()">
+            <div for="account" class="w-10 h-10 rounded-full ml-2" style="background-color: var(--bg-color2);"></div>
+          </button>
+          <div id="dropdownMenu" class="origin-top-right absolute right-0 mt-2 w-56 rounded-md hidden z-10" style="background-color: var(--bg-color);">
+              <div class="py-1">
+                <a href="index.html" class="block px-4 py-2 text-[20px] transition-colors duration-200" style="background-color: var(--bg-color); color: var(--text-color2);"
+                onmouseover="this.style.backgroundColor='var(--accent-color)'"
+                onmouseout="this.style.backgroundColor='var(--bg-color)'">Головна</a>
+                <a href="#" class="block px-4 py-2 text-[20px] transition-colors duration-200" style="background-color: var(--bg-color);  color: var(--text-color2);"
+                onmouseover="this.style.backgroundColor='var(--accent-color)'"
+                onmouseout="this.style.backgroundColor='var(--bg-color)'">Особистий кабінет</a>
+                <a href="#" class="block px-4 py-2 text-[20px] transition-colors duration-200" style="background-color: var(--bg-color);  color: var(--text-color2);"
+                onmouseover="this.style.backgroundColor='var(--accent-color)'"
+                onmouseout="this.style.backgroundColor='var(--bg-color)'">Налаштування</a>
+              </div>
+          </div>
       </div>
+
     </div>
+  </div>
   
-    <div class="flex flex-col items-center justify-center flex-grow px-4">
+  <div class="flex flex-col items-center justify-center flex-grow px-4">
         
-        <form class="space-y-8">
-            <div>
-            <label class="block mb-1 text-[30px]">Email</label>
-            <input type="email" placeholder="Введіть email" required
-                    class="w-100 px-4 py-2 text-[30px] rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2"
-                    style="background-color: white; color: black;">
-            </div>
-        
-            <div>
-            <label class="block mb-1 text-[30px]">Пароль</label>
-            <input type="password" placeholder="Створіть пароль" required
-                    class="w-100 px-4 py-2 text-[30px] rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2"
-                    style="background-color: white; color: black;">
-            </div>
-        
-            <button type="submit" class="w-100 py-2 text-[30px] rounded text-white bg-[#7c0f2d]">
-            Увійти
-            </button>
-        </form>
+    <form class="space-y-8">
+        <div>
+        <label class="block mb-1 text-[30px]">Ім’я</label>
+        <input type="text" placeholder="Введіть ім’я" required
+                class="w-100 px-4 py-2 text-[30px] rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2"
+                style="background-color: white; color: black;">
+        </div>
+    
+        <div>
+        <label class="block mb-1 text-[30px]">Пароль</label>
+        <input type="password" placeholder="Введіть пароль" required
+                class="w-100 px-4 py-2 text-[30px] rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2"
+                style="background-color: white; color: black;">
+        </div>
+    
+        <button type="submit" class="w-100 py-2 text-[30px] rounded" style="background-color: var(--bg-color); color: var(--text-color2);">
+        Увійти
+        </button>
+    </form>
         
         <p class="text-[30px] text-center mt-4 opacity-80">Не маєте акаунт? <a href="registration.html" class="underline">Зареєструватися</a></p>
         </div>

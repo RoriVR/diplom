@@ -857,3 +857,97 @@
     }
   }
 }
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Теми */
+:root {
+  --bg-color: #900020;
+  --text-color: #900020;
+  --bg-color2: #FDFDFD;
+  --text-color2: #FDFDFD;
+  --accent-color: #C77F8F;
+}
+
+.theme-w-red {
+  --bg-color: #900020;
+  --text-color: #900020;
+  --bg-color2: #FDFDFD;
+  --text-color2: #FDFDFD;
+  --accent-color: #C77F8F;
+}
+
+.theme-w-blue {
+  --bg-color: #333399;
+  --text-color: #333399;
+  --bg-color2: #FDFDFD;
+  --text-color2: #FDFDFD;
+  --accent-color: #9898CB;
+}
+
+.theme-w-brown {
+  --bg-color: #6B4423;
+  --text-color: #6B4423;
+  --bg-color2: #FDFDFD;
+  --text-color2: #FDFDFD;
+  --accent-color: #B4A190;
+}
+
+.theme-w-green {
+  --bg-color: #556832;
+  --text-color: #556832;
+  --bg-color2: #FDFDFD;
+  --text-color2: #FDFDFD;
+  --accent-color: #A9B398;
+}
+
+.theme-w-purple {
+  --bg-color: #883DBD;
+  --text-color: #883DBD;
+  --bg-color2: #FDFDFD;
+  --text-color2: #FDFDFD;
+  --accent-color: #C39DDD;
+}
+
+.theme-b-red {
+  --bg-color: #FF6877;
+  --text-color: #FF6877;
+  --bg-color2: #2C2C2C;
+  --text-color2: #2C2C2C;
+  --accent-color: #954A51;
+}
+
+.theme-b-blue {
+  --bg-color: #87CEEB;
+  --text-color: #87CEEB;
+  --bg-color2: #2C2C2C;
+  --text-color2: #2C2C2C;
+  --accent-color: #597D8B;
+}
+
+.theme-b-brown {
+  --bg-color: #D2B48C;
+  --text-color: #D2B48C;
+  --bg-color2: #2C2C2C;
+  --text-color2: #2C2C2C;
+  --accent-color: #7F705C;
+}
+
+.theme-b-green {
+  --bg-color: #9ACD32;
+  --text-color: #9ACD32;
+  --bg-color2: #2C2C2C;
+  --text-color2: #2C2C2C;
+  --accent-color: #637C2F;
+}
+
+.theme-b-purple {
+  --bg-color: #DDA0DD;
+  --text-color: #DDA0DD;
+  --bg-color2: #2C2C2C;
+  --text-color2: #2C2C2C;
+  --accent-color: #846684;
+}
